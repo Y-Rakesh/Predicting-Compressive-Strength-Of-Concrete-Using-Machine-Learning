@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concrete Strength Prediction</title>
+    <style>
+        body {
+            background-image: url('/static/brick2.jpg');
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: black;
+            
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: white;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            width: 50%;
+            max-width: 700px;
+        }
+        label, input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 1.5em;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Concrete Strength Prediction</h2>
+    <form action="/predict" method="post">
+        <label for="cement">Cement (kg in a m³ mixture):</label>
+        <input type="text" id="cement" name="cement" placeholder="enter value" required>
+
+        <label for="blast_furnace_slag">Blast Furnace Slag (kg in a m³ mixture):</label>
+        <input type="text" id="blast_furnace_slag" name="blast_furnace_slag"  placeholder="enter value" required>
+
+        <label for="fly_ash">Fly Ash (kg in a m³ mixture):</label>
+        <input type="text" id="fly_ash" name="fly_ash" placeholder="enter value" required>
+
+        <label for="water">Water (kg in a m³ mixture):</label>
+        <input type="text" id="water" name="water" placeholder="enter value"  required>
+
+        <label for="superplasticizer">Superplasticizer (kg in a m³ mixture):</label>
+        <input type="text" id="superplasticizer" name="superplasticizer" placeholder="enter value" required>
+
+        <label for="coarse_aggregate">Coarse Aggregate (kg in a m³ mixture):</label>
+        <input type="text" id="coarse_aggregate" name="coarse_aggregate" placeholder="enter value" required>
+
+        <label for="fine_aggregate">Fine Aggregate (kg in a m³ mixture):</label>
+        <input type="text" id="fine_aggregate" name="fine_aggregate" placeholder="enter value"  required>
+
+        <label for="age">Age (days):</label>
+        <input type="text" id="age" name="age" placeholder="enter value" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
